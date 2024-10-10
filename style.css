@@ -1,0 +1,330 @@
+:root {
+    /* Цвета для светлой темы */
+    --background-light: #e1f5fe;
+    --background-light-2: #bbdefb;
+    --text-light: #0d47a1;
+    --link-light: #0b3c8c;
+    
+    /* Цвета для темной темы */
+    --background-dark: #121212;
+    --background-dark-2: #1e1e1e;
+    --text-dark: #ffffff;
+    --link-dark: #bbdefb;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-light);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: background 0.3s;
+}
+
+.nav-link {
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--link-light);
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Секции контента */
+.content-section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Глассоморфизм для карточек */
+.glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Подвал */
+.footer {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Темная тема */
+body.dark {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+body.dark header {
+    background: rgba(18, 18, 18, 0.85);
+}
+
+body.dark .nav-link {
+    color: var(--text-dark);
+}
+
+body.dark .nav-link:hover {
+    color: var(--link-dark);
+}
+
+body.dark .hero {
+    background: rgba(30, 30, 30, 0.9);
+}
+
+body.dark h2 {
+    color: var(--link-dark);
+}
+
+body.dark .glass-card {
+    background: rgba(30, 30, 30, 0.6);
+    color: var(--text-dark);
+}
+
+body.dark .footer {
+    background: rgba(30, 30, 30, 0.9);
+    color: var(--text-dark);
+}
+
+body.dark .footer a {
+    color: var(--link-dark);
+}
+
+/* Шапка и навигация */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #0d47a1;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0b3c8c; /* немного темнее при наведении */
+}
+
+.navbar-toggler-icon {
+    background-color: #0d47a1;
+}
+
+/* Главный баннер */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #0b3c8c; /* немного темнее */
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #0d47a1;
+}
+
+/* Секции контента */
+.content-section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #0b3c8c; /* немного темнее */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Глассоморфизм для карточек */
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.glass-card h5 {
+    color: #0b3c8c; /* немного темнее */
+    font-weight: 600;
+}
+
+.glass-card p {
+    color: #0d47a1;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Подвал */
+.footer {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    color: #0b3c8c; /* немного темнее */
+}
+
+.footer a {
+    color: #0d47a1;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.footer a:hover {
+    color: #0b3c8c; /* немного темнее при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .glass-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
